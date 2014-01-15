@@ -1,0 +1,19 @@
+<div class="more-info">
+	<div class="more-info-header">
+		<span ng-click="backToMap()" class="back-button">
+			<span class="icon-arrow-left"/>
+		</span>
+		<span class="more-info-title no-select">{{item.data.Title}}</span>
+	</div>
+	<div>
+		<div class="main-info">
+			<row item="item"></row>
+			<div class="main-info-property-container"><table>
+				<tr ng-repeat="(fieldId, value) in item | displayForm:mainForm" ng-show="{{value}}">
+					<td><span style="display:inline;" class="key">{{fieldId}}</span></td><td><span style="display:inline;" class="value">{{value}}</span></td>
+				</tr>
+			</div></table>
+		</div>
+	</div>
+</div>
+
